@@ -7,6 +7,7 @@ namespace DOMMultipleValuesExtractor_1
 	using Skyline.DataMiner.Analytics.GenericInterface;
 	using Skyline.DataMiner.Net.Apps.DataMinerObjectModel;
 	using Skyline.DataMiner.Net.Apps.Modules;
+	using Skyline.DataMiner.Net.Helper;
 	using Skyline.DataMiner.Net.ManagerStore;
 	using Skyline.DataMiner.Net.Messages;
 	using Skyline.DataMiner.Net.Messages.SLDataGateway;
@@ -83,6 +84,10 @@ namespace DOMMultipleValuesExtractor_1
 		public GQIPage GetNextPage(GetNextPageInputArgs args)
 		{
 			var rows = new List<GQIRow>();
+
+			if (_result.IsNullOrEmpty())
+				return new GQIPage(rows.ToArray());
+
 			foreach (var result in _result.Split(';'))
 			{
 				rows.Add(new GQIRow(
