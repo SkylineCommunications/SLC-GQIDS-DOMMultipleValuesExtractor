@@ -5,7 +5,7 @@
 	<Type>Automation</Type>
 	<Author>Skyline Communications</Author>
 	<CheckSets>FALSE</CheckSets>
-	<Folder></Folder>
+	<Folder>GQI</Folder>
 
 	<Protocols>
 	</Protocols>
@@ -20,7 +20,7 @@
 		<Exe id="1" type="csharp">
 			<Value><![CDATA[[Project:DOMMultipleValuesExtractor_1]]]></Value>
 			<Param type="preCompile">true</Param>
-			<Param type="libraryName">Telenet Channels</Param>
+			<Param type="libraryName">DOM Multiple Values Extractor</Param>
 			<Message></Message>
 		</Exe>
 	</Script>
